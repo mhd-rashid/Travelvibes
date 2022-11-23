@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>REGISTRATION</title>
+    <style>
+      form{
+      text-align:center;
+      margin-top:100px;
+      background-color:green;
+      }
+
+
+    </style>
+</head>
+<body style="background-image:url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Freflection%2F&psig=AOvVaw0gvBgEr1o4anKOYto6Ti7T&ust=1667904339553000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCJi2xv_xm_sCFQAAAAAdAAAAABAE');">
+<form action="register" method="post">
+  {% csrf_token %}
+  <label>username</label><br>
+  <input type="text" name="username" placeholder="username"><br>
+  <br>
+  <label>first name</label><br>
+  <input type="text" name="first_name" placeholder="enter firstname"><br>
+  <br>
+  <label>last name</label><br>
+  <input type="text" name="last_name" placeholder="enter your last name"><br>
+  <br>
+  <label>email</label><br>
+  <input type="email" name="email" placeholder="enter email"><br>
+  <br>
+  <label>password</label><br>
+  <input type="password" name="password" placeholder="enter password"><br>
+  <br>
+  <label>cpassword</label><br>
+  <input type="password" name="password1" placeholder="confirm your password">
+  <br>
+  <br>
+  <input type="submit">
+</form>
+{% for i in messages %}
+<h2>{{i}}</h2>
+{% endfor %}
+</body>
+</html>
